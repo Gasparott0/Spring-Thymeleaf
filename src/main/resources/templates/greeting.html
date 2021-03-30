@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles/resetCss.css}">
+
+    <title>Gasparotto Teste</title>
+    <style>
+        body {
+            font-family: 'New Tegomin', serif;
+            background: bisque;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 5em;
+        }
+        p {
+            padding-top: 25px;
+            font-size: 1.5em;
+        }
+        p.time {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste Thymeleaf</h1>
+    <p th:text="'Olá, ' + ${name} + '!'" />
+    <p class="time" th:text="'Dia e Horário atual: ' + ${dateNow} + '!'" />
+</body>
+</html>
